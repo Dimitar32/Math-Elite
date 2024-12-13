@@ -1,12 +1,27 @@
-import React, { useState } from "react";
-import MathEliteLogo from './MathEliteLogo.png'
+import React, { useState, useEffect, useRef } from "react";
+import MathEliteLogo from './MathEliteLogo.png';
 import "./Header.css";
 
 const Header = () => {
     const [isStudentsOpen, setIsStudentsOpen] = useState(false);
+    const dropdownRef = useRef(null);
 
-    // Toggle dropdowns
+    // Toggle dropdown for "За ученици"
     const toggleStudentsDropdown = () => setIsStudentsOpen(!isStudentsOpen);
+
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setIsStudentsOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleOutsideClick);
+        return () => {
+            document.removeEventListener("mousedown", handleOutsideClick);
+        };
+    }, []);
 
     return (
         <header className="header">
@@ -19,7 +34,7 @@ const Header = () => {
             <nav className="nav">
                 <ul>
                     <li><a href="#home">Начало</a></li>
-                    <li>
+                    <li ref={dropdownRef}>
                         <span
                             className="dropdown-toggle"
                             onClick={toggleStudentsDropdown}
@@ -45,11 +60,6 @@ const Header = () => {
                                         <li><a href="#class7">7 клас</a></li>
                                     </ul>
                                 </div>
-                                {/*<div className="dropdown-section">
-                                    <h4>Гимназиални класове</h4>
-                                    <ul>
-                                    </ul>
-                                </div>*/}
                                 <div className="dropdown-footer">
                                     <a href="#all-classes" className="footer-link">Всички класове</a>
                                 </div>

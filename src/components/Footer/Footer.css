@@ -1,0 +1,112 @@
+/* Footer Styling */
+.footer {
+    background-color: #004080; /* Dark blue, same as the header */
+    color: white;
+    padding: 20px 0; /* Space inside the footer */
+    width: 100%; /* Full width of the viewport */
+    box-sizing: border-box; /* Includes padding in width calculation */
+    position: relative; /* Ensures it stays positioned correctly */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Content width constraint */
+    width: 100%; /* Ensure it stretches across */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 0 20px; /* Side padding for the content */
+}
+
+/* Footer Section */
+.footer-section {
+    flex: 1; /* Equal spacing for each section */
+    min-width: 200px; /* Prevents shrinking */
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #FFD700; /* Gold for section titles */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li,
+.footer-section .social-icons a {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover,
+.footer-section .social-icons a:hover {
+    color: #FFD700; /* Gold hover effect */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #FFD700; /* Gold separator line */
+    font-size: 14px;
+    color: #ccc;
+}
+/* Social Media Section */
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    gap: 10px; /* Add spacing between links */
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center; /* Center icon and text */
+    gap: 10px; /* Space between icon and text */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #FFD700; /* Gold hover effect */
+}
+
+.social-icon {
+    font-size: 20px; /* Adjust icon size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        min-width: 100%; /* Expand each section fully on mobile */
+        margin-bottom: 20px;
+    }
+}

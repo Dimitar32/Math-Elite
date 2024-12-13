@@ -60,75 +60,6 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #002D62; /* Slightly darker blue */
-    list-style: none;
-    margin: 0;
-    padding: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    width: 150px;
-}
-
-.dropdown-menu li {
-    padding: 5px 20px;
-}
-
-.dropdown-menu li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    font-weight: normal;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown-menu li a:hover {
-    background-color: #FFD700;
-    color: black;
-    border-radius: 3px;
-}
-
-/* Right Section Styling */
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding-right: 200px;
-}
-
-.search-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.search-button:hover {
-    color: #FFD700;
-}
-
-/* Profile Image Styling */
-.profile {
-    position: relative;
-}
-
-.profile-img {
-    height: 40px; /* Adjust size as needed */
-    width: 40px;
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures proper scaling */
-    border: 2px solid white; /* Optional: adds a border */
-    cursor: pointer;
-}
-
-
-/* Dropdown Menu Styling */
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
     background-color: white; /* White background for the dropdown */
     color: black; /* Black text for dropdown */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -136,8 +67,19 @@
     border-radius: 5px;
     width: 300px; /* Set width */
     z-index: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
 }
 
+.nav ul li:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Dropdown Section Styling */
 .dropdown-section {
     margin-bottom: 15px;
 }
@@ -147,7 +89,7 @@
     color: #FFD700; /* Gold for section headers */
     margin-bottom: 10px;
 }
-/* Dropdown Section Styling */
+
 .dropdown-section ul {
     list-style: none;
     padding: 0;
@@ -155,9 +97,6 @@
     display: flex; /* Use flexbox for horizontal alignment */
     flex-wrap: wrap; /* Allow wrapping if needed */
     gap: 15px; /* Add space between items */
-}
-.dropdown-section ul li {
-    margin-bottom: 8px;
 }
 
 .dropdown-section ul li a {
@@ -194,8 +133,58 @@
     background-color: #FFC107; /* Slightly lighter gold */
 }
 
-/* Prevent content overlap */
-body {
-    margin: 0;
-    padding-top: 70px; /* Adjust to header height */
+/* Right Section Styling */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-right: 200px;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.search-button:hover {
+    color: #FFD700;
+}
+
+.profile {
+    position: relative;
+}
+
+.profile-img {
+    height: 40px; /* Adjust size as needed */
+    width: 40px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures proper scaling */
+    border: 2px solid white; /* Optional: adds a border */
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .header-right {
+        padding-right: 0;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
 }
