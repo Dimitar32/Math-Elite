@@ -3,7 +3,7 @@
     font-family: Arial, sans-serif;
     color: #004080;
     background-color: #f4f4f9;
-    padding: 20px;
+    /* padding: 20px; */
     min-height: 100vh;
 }
 
@@ -11,11 +11,13 @@
 .hero-section {
     text-align: center;
     padding: 40px 20px;
+    background-color: #336699;
+    color: white;
 }
 
 .hero-section h1 {
     font-size: 36px;
-    color: #004080;
+    color: white;
     margin-bottom: 20px;
 }
 

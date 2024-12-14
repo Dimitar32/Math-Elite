@@ -5,12 +5,15 @@ import styles from "./OurMission.module.css";
 const OurMission = () => {
     return (
         <div className={styles["mission-container"]}>
-            <h1 className={styles["mission-title"]}>Нашата Мисия</h1>
-            <p className={styles["mission-description"]}>
-                Нашата платформа се стреми да промени начина, по който учениците изучават
-                математика, като предлага алтернативен и ефективен подход към ученето. Ние
-                вярваме, че всеки може да обикне математиката и да постигне успех!
-            </p>
+            <div className={styles["mission-description-container"]}>
+                <h1 className={styles["mission-title"]}>Нашата Мисия</h1>
+                <p className={styles["mission-description"]}>
+                    Нашата платформа се стреми да промени начина, по който учениците изучават
+                    математика, като предлага алтернативен и ефективен подход към ученето. Ние
+                    вярваме, че всеки може да обикне математиката и да постигне успех!
+                </p>
+            </div>
+            
             <div className={styles["mission-features"]}>
                 <div className={styles["feature-card"]}>
                     <FaCogs className={styles["feature-icon"]} />

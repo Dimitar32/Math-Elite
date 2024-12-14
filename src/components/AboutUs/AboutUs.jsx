@@ -33,7 +33,7 @@ const AboutUs = () => {
             </div>
 
             {/* Reviews Section */}
-            <div className={styles["reviews-section"]}>
+            {/* <div className={styles["reviews-section"]}>
                 <h2>Отзиви</h2>
                 <div className={styles["review-card"]}>
                     <p>
@@ -50,7 +50,7 @@ const AboutUs = () => {
                     </p>
                     <h4>- Ученик от Пловдив</h4>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };
