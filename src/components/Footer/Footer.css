@@ -22,6 +22,7 @@
 .footer-section {
     flex: 1; /* Equal spacing for each section */
     min-width: 200px; /* Prevents shrinking */
+    text-align: center; 
 }
 
 .footer-section h4 {
@@ -54,6 +55,7 @@
 .social-icons {
     display: flex;
     gap: 15px;
+    align-items: center; 
 }
 
 .social-icons a {

@@ -1,37 +1,37 @@
 /* Container Styling */
 .mission-container {
-    background-color: #f7f9fc; /* Light grey background */
+    background-color: white; /* Light grey background */
     text-align: center;
     padding: 50px 20px;
-  }
-  
-  /* Title and Description */
-  .mission-title {
+}
+
+/* Title and Description */
+.mission-title {
     color: #004080; /* Blue color */
     font-size: 2.5rem;
     margin-bottom: 20px;
-  }
-  
-  .mission-description {
+}
+
+.mission-description {
     color: #333;
     font-size: 1.2rem;
     margin-bottom: 40px;
     line-height: 1.8;
     max-width: 800px;
     margin: 0 auto;
-  }
-  
-  /* Features Section */
-  .mission-features {
+}
+
+/* Features Section */
+.mission-features {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 100px;
     gap: 20px;
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  }
-  
-  /* Feature Card */
-  .feature-card {
+}
+
+/* Feature Card */
+.feature-card {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -39,31 +39,30 @@
     max-width: 300px;
     text-align: center;
     flex: 1 1 300px;
-  }
-  
-  .feature-icon {
+}
+
+.feature-icon {
     font-size: 3rem; /* Larger icon size */
     color: #ffd700; /* Gold color */
     margin-bottom: 15px;
-  }
-  
-  .feature-title {
+}
+
+.feature-title {
     color: #004080;
     font-size: 1.5rem;
     margin-bottom: 10px;
-  }
-  
-  .feature-description {
+}
+
+.feature-description {
     color: #555;
     font-size: 1rem;
     line-height: 1.6;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .mission-features {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  }
-  
+}

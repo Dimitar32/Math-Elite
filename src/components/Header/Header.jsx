@@ -52,7 +52,7 @@ const Header = () => {
                         {isStudentsOpen && (
                             <div className="dropdown-menu">
                                 <div className="dropdown-section">
-                                    <h4>Начални класове</h4>
+                                    <h4>Начален етап</h4>
                                     <ul>
                                         <li><a href="#class1">1 клас</a></li>
                                         <li><a href="#class2">2 клас</a></li>
@@ -61,7 +61,7 @@ const Header = () => {
                                     </ul>
                                 </div>
                                 <div className="dropdown-section">
-                                    <h4>Средни класове</h4>
+                                    <h4>Прогимназиален етап</h4>
                                     <ul>
                                         <li><a href="#class5">5 клас</a></li>
                                         <li><a href="#class6">6 клас</a></li>
