@@ -1,45 +1,68 @@
-import React, { useState } from "react";
-import "./Login.css";
+import React from "react";
+import styles from "./Login.module.css";
+import { FaGoogle, FaFacebook } from "react-icons/fa";
 
 const Login = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const handleGoogleLogin = () => {
+        console.log("Google login clicked");
+    };
 
-    const handleSubmit = (e) => {
+    const handleFacebookLogin = () => {
+        console.log("Facebook login clicked");
+    };
+
+    const handleEmailLogin = (e) => {
         e.preventDefault();
-        // Add logic to send login data to the backend
-        console.log({ email, password });
+        console.log("Email login submitted");
     };
 
     return (
-        <div className="login-container">
-            <h2>Вход</h2>
-            <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="email">Имейл</label>
+        <div className={styles.loginContainer}>
+            <div className={styles.loginCard}>
+                <h1 className={styles.loginTitle}>Вход</h1>
+                <p className={styles.loginDescription}>
+                    Влезте в MathElite, за да получите достъп до вашия акаунт!
+                </p>
+
+                <div className={styles.socialLoginContainer}>
+                    <button
+                        className={`${styles.socialButton} ${styles.google}`}
+                        onClick={handleGoogleLogin}
+                    >
+                        <FaGoogle className={styles.socialIcon} /> Вход с Google
+                    </button>
+                    <button
+                        className={`${styles.socialButton} ${styles.facebook}`}
+                        onClick={handleFacebookLogin}
+                    >
+                        <FaFacebook className={styles.socialIcon} /> Вход с Facebook
+                    </button>
+                </div>
+
+                <div className={styles.divider}>
+                    <span>или</span>
+                </div>
+
+                <form className={styles.loginForm} onSubmit={handleEmailLogin}>
                     <input
                         type="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        name="email"
+                        placeholder="Имейл адрес"
+                        className={styles.formInput}
                         required
                     />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="password">Парола</label>
                     <input
                         type="password"
-                        id="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        name="password"
+                        placeholder="Парола"
+                        className={styles.formInput}
                         required
                     />
-                </div>
-                <button type="submit" className="submit-button">Вход</button>
-            </form>
-            <p>
-                Нямате акаунт? <a href="/registration" className="register-link">Регистрация</a>
-            </p>
+                    <button type="submit" className={styles.ctaButton}>
+                        Вход
+                    </button>
+                </form>
+            </div>
         </div>
     );
 };

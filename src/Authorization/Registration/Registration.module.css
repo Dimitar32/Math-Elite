@@ -1,0 +1,132 @@
+/* Container */
+.registrationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+/* Card */
+.registrationCard {
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Title and Description */
+.registrationTitle {
+    font-size: 28px;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.registrationDescription {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Social Buttons */
+.socialLoginContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.socialButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.google {
+    background-color: #db4437;
+    color: white;
+}
+
+.google:hover {
+    background-color: #c33c2f;
+}
+
+.facebook {
+    background-color: #1877f2;
+    color: white;
+}
+
+.facebook:hover {
+    background-color: #155cb0;
+}
+
+.socialIcon {
+    font-size: 18px;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #999;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
+
+/* Form */
+.registrationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formInput {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.formInput:focus {
+    outline: none;
+    border-color: #004080;
+    box-shadow: 0 0 5px rgba(0, 64, 128, 0.2);
+}
+
+.ctaButton {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+    background-color: #002d5a;
+}
