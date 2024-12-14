@@ -1,17 +1,44 @@
 import React, { useState } from "react";
+import { GoogleLogin } from "@react-oauth/google";
 import { FaGoogle, FaFacebook } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
 import styles from "./LoginAndRegistration.module.css";
 
 const LoginAndRegistration = () => {
   const [activeTab, setActiveTab] = useState("login");
+  const navigate = useNavigate(); // Initialize navigate hook
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
   };
 
-  const handleGoogleLogin = () => {
-    console.log("Google Login clicked!");
-    // Add Google login integration here
+  const handleGoogleLoginSuccess = (credentialResponse) => {
+    console.log("Google Login Successful:", credentialResponse.credential);
+  
+    fetch("https://localhost:7140/api/GoogleLogin/google", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ idToken: credentialResponse.credential }),
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to log in");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log("Backend response:", data);
+        // Only navigate if the backend login was successful
+        navigate("/");
+      })
+      .catch((err) => {
+        console.error("Error:", err);
+        alert("Failed to log in. Please try again.");
+      });
+  };
+
+  const handleGoogleLoginFailure = () => {
+    console.error("Google Login Failed!");
   };
 
   const handleFacebookLogin = () => {
@@ -57,9 +84,20 @@ const LoginAndRegistration = () => {
             
             <p className={styles.orText}>или</p>
 
-            <button className={styles.googleButton} onClick={handleGoogleLogin}>
-              <FaGoogle /> Вход с Google
-            </button>
+            {/* Google Login Button */}
+            <GoogleLogin
+              onSuccess={handleGoogleLoginSuccess}
+              onError={handleGoogleLoginFailure}
+              render={(renderProps) => (
+                <button
+                  className={styles.googleButton}
+                  onClick={renderProps.onClick}
+                  disabled={renderProps.disabled}
+                >
+                  <FaGoogle /> Вход с Google
+                </button>
+              )}
+            />
             <button className={styles.facebookButton} onClick={handleFacebookLogin}>
               <FaFacebook /> Вход с Facebook
             </button>
@@ -83,9 +121,20 @@ const LoginAndRegistration = () => {
             
             <p className={styles.orText}>или</p>
 
-            <button className={styles.googleButton} onClick={handleGoogleLogin}>
-              <FaGoogle /> Вход с Google
-            </button>
+            {/* Google Login Button */}
+            <GoogleLogin
+              onSuccess={handleGoogleLoginSuccess}
+              onError={handleGoogleLoginFailure}
+              render={(renderProps) => (
+                <button
+                  className={styles.googleButton}
+                  onClick={renderProps.onClick}
+                  disabled={renderProps.disabled}
+                >
+                  <FaGoogle /> Вход с Google
+                </button>
+              )}
+            />
             <button className={styles.facebookButton} onClick={handleFacebookLogin}>
               <FaFacebook /> Вход с Facebook
             </button>
