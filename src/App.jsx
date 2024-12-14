@@ -7,6 +7,7 @@ import Mission from "./components/OurMission/OurMission.jsx";
 import About from "./components/AboutUs/AboutUs.jsx";
 import Registration from "./Authorization/Registration/Registration.jsx";
 import Login from "./Authorization/Login/Login.jsx";
+import LoginReg from "./Authorization/LoginAndRegistration/LoginAndRegistration.jsx";
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
                     <Route path="/about" element={<About />} />
                     <Route path="/registration" element={<Registration />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/loginOrRegistration" element={<LoginReg />} />
                 </Routes>
                 <Footer />
             </div>

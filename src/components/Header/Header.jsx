@@ -82,7 +82,7 @@ const Header = () => {
             <div className="header-right">
                 <button className="search-button">🔍</button>
                 {!isLoggedIn ? (
-                    <button className="login-button" onClick={() => navigate("/registration")}> ВХОД </button>
+                    <button className="login-button" onClick={() => navigate("/loginOrRegistration")}> ВХОД </button>
                 ) : (
                     <div className="profile">
                         <img

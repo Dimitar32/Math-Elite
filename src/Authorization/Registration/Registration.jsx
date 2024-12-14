@@ -24,25 +24,6 @@ const Registration = () => {
                     Регистрирайте се, за да получите достъп до MathElite!
                 </p>
 
-                <div className={styles.socialLoginContainer}>
-                    <button
-                        className={`${styles.socialButton} ${styles.google}`}
-                        onClick={handleGoogleLogin}
-                    >
-                        <FaGoogle className={styles.socialIcon} /> Регистрация с Google
-                    </button>
-                    <button
-                        className={`${styles.socialButton} ${styles.facebook}`}
-                        onClick={handleFacebookLogin}
-                    >
-                        <FaFacebook className={styles.socialIcon} /> Регистрация с Facebook
-                    </button>
-                </div>
-
-                <div className={styles.divider}>
-                    <span>или</span>
-                </div>
-
                 <form
                     className={styles.registrationForm}
                     onSubmit={handleEmailRegistration}
@@ -72,6 +53,26 @@ const Registration = () => {
                         Регистрирайте се
                     </button>
                 </form>
+
+                <div className={styles.divider}>
+                    <span>или</span>
+                </div>
+
+                <div className={styles.socialLoginContainer}>
+                    <button
+                        className={`${styles.socialButton} ${styles.google}`}
+                        onClick={handleGoogleLogin}
+                    >
+                        <FaGoogle className={styles.socialIcon} /> Влез с Google
+                    </button>
+                    <button
+                        className={`${styles.socialButton} ${styles.facebook}`}
+                        onClick={handleFacebookLogin}
+                    >
+                        <FaFacebook className={styles.socialIcon} /> Влез с Facebook
+                    </button>
+                </div>
+
             </div>
         </div>
     );

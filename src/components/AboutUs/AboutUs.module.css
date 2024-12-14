@@ -1,106 +1,76 @@
-/* General Page Styling */
-.about-page {
-    font-family: Arial, sans-serif;
-    color: #004080;
+.heroSection {
+    background-color: #336699; /* Match the blue color in your screenshot */
+    color: white; /* White text for contrast */
+    text-align: center; /* Center the text */
+    padding: 60px 20px; /* Add padding for spacing */
+    border-radius: 8px; /* Optional: Add subtle rounded corners */
+}
+
+.heroSection h1 {
+    font-size: 36px; /* Title font size */
+    margin-bottom: 20px; /* Space below the title */
+    font-weight: bold; /* Ensure bold text */
+}
+
+.heroSection p {
+    font-size: 18px; /* Description font size */
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center align text block */
+    line-height: 1.6; /* Improve line spacing */
+}
+
+.teachersSection {
     background-color: #f4f4f9;
-    /* padding: 20px; */
-    min-height: 100vh;
-}
-
-/* Hero Section Styling */
-.hero-section {
     text-align: center;
-    padding: 40px 20px;
-    background-color: #336699;
-    color: white;
+    padding: 50px 20px;
 }
 
-.hero-section h1 {
+.teachersSection h2 {
     font-size: 36px;
-    color: white;
+    color: #004080;
     margin-bottom: 20px;
 }
 
-.hero-section p {
+.teachersDescription {
     font-size: 18px;
+    color: #555;
     line-height: 1.8;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
 }
 
-/* Our Team Section */
-.team-section {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.team-section h2 {
-    font-size: 28px;
-    color: #004080;
-    margin-bottom: 20px;
-}
-
-.team-content {
+.teacherCards {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
-.profile-card {
+.teacherCard {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 400px;
+    max-width: 300px;
     text-align: center;
+    flex: 1;
 }
 
-.profile-card h3 {
-    font-size: 24px;
-    color: #ffd700; /* Gold for emphasis */
+.teacherPhoto {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.teacherCard h3 {
+    font-size: 20px;
+    color: #004080;
     margin-bottom: 10px;
 }
 
-.profile-card p {
+.teacherCard p {
     font-size: 16px;
-    line-height: 1.6;
-    color: #004080;
-}
-
-/* Reviews Section */
-.reviews-section {
-    margin-top: 40px;
-    text-align: center;
-    background-color: #eaf2f8; /* Light blue background */
-    padding: 40px 20px;
-}
-
-.reviews-section h2 {
-    font-size: 28px;
-    color: #004080;
-    margin-bottom: 30px;
-}
-
-.review-card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 600px;
-    text-align: center;
-}
-
-.review-card p {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.review-card h4 {
-    font-size: 14px;
-    color: #004080;
-    font-weight: bold;
+    color: #555;
+    line-height: 1.5;
 }
