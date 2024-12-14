@@ -1,10 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
-import MathEliteLogo from './MathEliteLogo.png';
+import { Link } from 'react-router-dom';
+import MathEliteLogo from "./MathEliteLogo.png";
 import "./Header.css";
 
 const Header = () => {
     const [isStudentsOpen, setIsStudentsOpen] = useState(false);
     const dropdownRef = useRef(null);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const handleLogin = () => {
+        setIsLoggedIn(!isLoggedIn); // Toggles login state for testing
+    };
+
 
     // Toggle dropdown for "За ученици"
     const toggleStudentsDropdown = () => setIsStudentsOpen(!isStudentsOpen);
@@ -33,7 +40,7 @@ const Header = () => {
             </div>
             <nav className="nav">
                 <ul>
-                    <li><a href="#home">Начало</a></li>
+                    <li><Link to="/">Начало</Link></li>
                     <li ref={dropdownRef}>
                         <span
                             className="dropdown-toggle"
@@ -67,19 +74,25 @@ const Header = () => {
                         )}
                     </li>
                     <li><a href="#individual">Индивидуални уроци</a></li>
-                    <li><a href="#mission">Нашата мисия</a></li>
-                    <li><a href="#about">Кои сме ние</a></li>
+                    <li><Link to="/mission">Нашата мисия</Link></li>
+                    <li><Link to="/about">Кои сме ние</Link></li>
                 </ul>
             </nav>
             <div className="header-right">
                 <button className="search-button">🔍</button>
-                <div className="profile">
-                    <img
-                        src="https://via.placeholder.com/40" // Replace with actual profile picture URL
-                        alt="Profile"
-                        className="profile-img"
-                    />
-                </div>
+                {!isLoggedIn ? (
+                    <button className="login-button" onClick={handleLogin}>
+                        ВХОД
+                    </button>
+                ) : (
+                    <div className="profile">
+                        <img
+                            src="https://via.placeholder.com/40" // Replace with actual profile picture URL
+                            alt="Profile"
+                            className="profile-img"
+                        />
+                    </div>
+                )}
             </div>
         </header>
     );

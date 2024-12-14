@@ -86,7 +86,7 @@
 
 .dropdown-section h4 {
     font-size: 16px;
-    color: #FFD700; /* Gold for section headers */
+    color: #FFC107; /* Gold for section headers */
     margin-bottom: 10px;
 }
 
@@ -131,6 +131,7 @@
 
 .dropdown-footer .footer-link:hover {
     background-color: #FFC107; /* Slightly lighter gold */
+    color: white;
 }
 
 /* Right Section Styling */
@@ -165,6 +166,24 @@
     object-fit: cover; /* Ensures proper scaling */
     border: 2px solid white; /* Optional: adds a border */
     cursor: pointer;
+}
+
+/* Login Button Styling */
+.login-button {
+    background-color: #FFD700; /* Gold color */
+    color: #004080; /* Blue text */
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #FFC107; /* Lighter gold */
+    color: #002D62; /* Darker blue */
 }
 
 /* Responsive Design */

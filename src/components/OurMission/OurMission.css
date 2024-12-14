@@ -1,0 +1,68 @@
+/* General Page Styling */
+.mission-page {
+    font-family: Arial, sans-serif;
+    color: #004080;
+    background-color: #f4f4f9;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    color: #004080;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+}
+
+/* Features Section */
+.features-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    flex-grow: 1;
+    margin: 10px;
+    color: #004080;
+}
+
+.feature-icon {
+    font-size: 50px;
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.feature-item p {
+    font-size: 16px;
+    line-height: 1.5;
+}
