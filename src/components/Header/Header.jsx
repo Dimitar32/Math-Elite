@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import MathEliteLogo from "./MathEliteLogo.png";
 import "./Header.css";
 
 const Header = () => {
+    const navigate = useNavigate();
     const [isStudentsOpen, setIsStudentsOpen] = useState(false);
     const dropdownRef = useRef(null);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -81,9 +82,7 @@ const Header = () => {
             <div className="header-right">
                 <button className="search-button">🔍</button>
                 {!isLoggedIn ? (
-                    <button className="login-button" onClick={handleLogin}>
-                        ВХОД
-                    </button>
+                    <button className="login-button" onClick={() => navigate("/registration")}> ВХОД </button>
                 ) : (
                     <div className="profile">
                         <img

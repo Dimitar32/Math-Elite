@@ -4,6 +4,8 @@
     color: #004080;
     background-color: #f4f4f9;
     padding: 20px;
+    padding-left: 0%;
+    padding-right: 0%;
 }
 
 /* Hero Section */
@@ -94,6 +96,7 @@
     padding: 40px 20px;
     background-color: #004080;
     color: white;
+    /* width: 100%; */
 }
 
 .cta-section h2 {

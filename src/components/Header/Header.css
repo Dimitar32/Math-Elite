@@ -6,13 +6,18 @@
     background-color: #004080; /* Dark blue */
     color: white;
     padding: 10px 20px;
-    position: fixed;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Включва падинг и рамка в широчината */
+    position: relative;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
 }
 
+/* 
+justify-content: center; */
 .header-left {
     display: flex;
     align-items: center;

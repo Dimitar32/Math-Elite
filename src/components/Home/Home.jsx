@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import "./Home.css";
 import { FaCalculator, FaRocket, FaAward } from "react-icons/fa";
 
 const Home = () => {
+    const navigate = useNavigate();
+    
     return (
         <div className="home-page">
             {/* Hero Section */}
@@ -51,7 +54,7 @@ const Home = () => {
             <div className="cta-section">
                 <h2>Готови ли сте да започнете?</h2>
                 <p>Присъединете се към MathElite и започнете вашето пътешествие към успеха в математиката!</p>
-                <button className="cta-button">Регистрирайте се сега</button>
+                <button className="cta-button" onClick={() => navigate("/registration")}>Регистрирайте се сега</button>
             </div>
         </div>
     );
