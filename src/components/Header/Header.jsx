@@ -8,6 +8,31 @@ const Header = () => {
     const [isStudentsOpen, setIsStudentsOpen] = useState(false);
     const dropdownRef = useRef(null);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [user, setUser] = useState(null);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+  
+    useEffect(() => {
+        const storedUser = localStorage.getItem("user");
+        const loginStatus = localStorage.getItem("isLoggedIn");
+    
+        if (storedUser && loginStatus === "true") {
+          setUser(JSON.parse(storedUser));
+          setIsLoggedIn(true);
+        }
+    }, []);
+  
+    const handleLogout = () => {
+        localStorage.removeItem("user");
+        localStorage.removeItem("isLoggedIn");
+        setIsLoggedIn(false);
+        setUser(null);
+        navigate("/");
+    };
+    
+      const toggleDropdown = () => {
+        setShowDropdown(!showDropdown);
+      };
+    
 
     const handleLogin = () => {
         setIsLoggedIn(!isLoggedIn); // Toggles login state for testing
@@ -81,7 +106,7 @@ const Header = () => {
             </nav>
             <div className="header-right">
                 <button className="search-button">🔍</button>
-                {!isLoggedIn ? (
+                {/* {!isLoggedIn ? (
                     <button className="login-button" onClick={() => navigate("/loginOrRegistration")}> ВХОД </button>
                 ) : (
                     <div className="profile">
@@ -90,6 +115,30 @@ const Header = () => {
                             alt="Profile"
                             className="profile-img"
                         />
+                    </div>
+                )} */}
+                
+                {!isLoggedIn ? (
+                    <button className="login-button" onClick={() => navigate("/loginOrRegistration")}>
+                    ВХОД
+                    </button>
+                ) : (
+                    <div className="profile" onClick={() => setDropdownOpen(!dropdownOpen)}>
+                    <img
+                        src="https://via.placeholder.com/40" // Replace with actual profile image
+                        alt="Profile"
+                        className="profile-img"
+                    />
+                    {dropdownOpen && (
+                        <div className="profile-dropdown">
+                            <button onClick={() => navigate("/profile")} className="dropdown-item">
+                                Твоят профил
+                            </button>
+                            <button onClick={handleLogout} className="dropdown-item">
+                                Изход
+                            </button>
+                        </div>
+                    )}
                     </div>
                 )}
             </div>

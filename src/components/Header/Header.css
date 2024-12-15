@@ -87,6 +87,7 @@ justify-content: center; */
 /* Dropdown Section Styling */
 .dropdown-section {
     margin-bottom: 15px;
+    z-index: 3000;
 }
 
 .dropdown-section h4 {
@@ -189,6 +190,36 @@ justify-content: center; */
 .login-button:hover {
     background-color: #FFC107; /* Lighter gold */
     color: #002D62; /* Darker blue */
+}
+
+/* Profile Dropdown Adjustment */
+.profile-dropdown {
+    position: absolute;
+    top: 100%; /* Aligns the dropdown below the profile image */
+    left: 0;
+    background-color: #fff; /* White background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    z-index: 1000; /* Ensures it is on top of other elements */
+    min-width: 150px; /* Minimum width */
+    overflow: hidden; /* Ensures no content spills out */
+}
+
+/* Dropdown Item Styling */
+.dropdown-item {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    color: #004080;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: #002D62;
 }
 
 /* Responsive Design */

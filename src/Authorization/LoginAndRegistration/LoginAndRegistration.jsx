@@ -28,7 +28,13 @@ const LoginAndRegistration = () => {
       })
       .then((data) => {
         console.log("Backend response:", data);
-        // Only navigate if the backend login was successful
+  
+        // Save user info in local storage
+        localStorage.setItem("user", JSON.stringify(data.user));
+        localStorage.setItem("isLoggedIn", "true");
+  
+        window.dispatchEvent(new Event("storage"));
+
         navigate("/");
       })
       .catch((err) => {
@@ -36,6 +42,7 @@ const LoginAndRegistration = () => {
         alert("Failed to log in. Please try again.");
       });
   };
+  
 
   const handleGoogleLoginFailure = () => {
     console.error("Google Login Failed!");

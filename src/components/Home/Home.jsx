@@ -64,7 +64,7 @@ const Home = () => {
                 </p>
                 <button
                     className={styles["cta-button"]}
-                    onClick={() => navigate("/registration")}
+                    onClick={() => navigate("/loginOrRegistration")}
                 >
                     Регистрирайте се сега
                 </button>
