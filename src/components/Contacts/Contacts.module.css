@@ -1,0 +1,115 @@
+.contactsContainer {
+    font-family: Arial, sans-serif;
+    color: #004080;
+    background-color: #f4f4f9;
+    padding: 20px 0;
+  }
+  
+  /* Info Section */
+  .infoSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .workingHours,
+  .contactDetails {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .workingHours h3,
+  .contactDetails h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ff9800;
+  }
+  
+  .contactDetails p {
+    margin: 5px 0;
+  }
+  
+  .mapButton {
+    margin-top: 10px;
+    background-color: #ff9800;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mapButton:hover {
+    background-color: #e68900;
+  }
+  
+  /* Map Section */
+  .mapSection iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    margin: 30px 0;
+  }
+  
+  /* Contact Form Section */
+  .contactFormSection {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .contactFormSection h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #004080;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputGroup label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #004080;
+  }
+  
+  .inputGroup input,
+  .inputGroup textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .inputGroup textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  .submitButton {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #e68900;
+  }
+  

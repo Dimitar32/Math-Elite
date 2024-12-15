@@ -9,7 +9,7 @@ const AboutUs = () => {
     <div className={styles.aboutPage}>
       {/* Introduction Section */}
       <div className={styles.heroSection}>
-        <h1>Кои сме ние</h1>
+        <h2>Кои сме ние</h2>
         <p>
           Добре дошли в MathElite - платформа, създадена от студенти за студенти, с цел да вдъхновява и предоставя иновативни методи за изучаване на математика.
         </p>

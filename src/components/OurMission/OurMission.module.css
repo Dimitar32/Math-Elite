@@ -7,9 +7,9 @@
 
 /* Title and Description */
 .mission-title {
-    color: white; /* Blue color */
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #f4f4f9;
 }
 
 .mission-description-container {

@@ -6,10 +6,10 @@
     border-radius: 8px; /* Optional: Add subtle rounded corners */
 }
 
-.heroSection h1 {
-    font-size: 36px; /* Title font size */
-    margin-bottom: 20px; /* Space below the title */
-    font-weight: bold; /* Ensure bold text */
+.heroSection h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #f4f4f9;
 }
 
 .heroSection p {
