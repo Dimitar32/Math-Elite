@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"; // Import social media icons
 import "./Footer.css";
 
@@ -29,7 +30,7 @@ const Footer = () => {
                 <div className="footer-section">
                     <h4>Полезни линкове</h4>
                     <ul>
-                        <li><a href="#faq">Често задавани въпроси</a></li>
+                        <li><Link to="/faq">Често задавани въпроси</Link></li>
                         <li><a href="#guide">Наръчник</a></li>
                         <li><a href="#terms">Общи условия</a></li>
                         <li><a href="#privacy">Лични данни</a></li>

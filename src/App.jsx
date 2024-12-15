@@ -10,6 +10,7 @@ import Registration from "./Authorization/Registration/Registration.jsx";
 import Login from "./Authorization/Login/Login.jsx";
 import LoginReg from "./Authorization/LoginAndRegistration/LoginAndRegistration.jsx";
 import UserProfile from "./components/UserProfile/UserProfile.jsx";
+import FAQ from "./components/FAQ/FAQ.jsx";
 
 
 const CLIENT_ID = "1057640799920-ao2d1u399ms60vt30mjido36p8tjt7gh.apps.googleusercontent.com";
@@ -28,6 +29,7 @@ const App = () => {
                         <Route path="/login" element={<Login />} />
                         <Route path="/loginOrRegistration" element={<LoginReg />} />
                         <Route path="/profile" element={<UserProfile />} />
+                        <Route path="/faq" element={<FAQ />} />
                     </Routes>
                     <Footer />
                 </div>

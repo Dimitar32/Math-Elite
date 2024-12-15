@@ -196,12 +196,12 @@ justify-content: center; */
 .profile-dropdown {
     position: absolute;
     top: 100%; /* Aligns the dropdown below the profile image */
-    left: 0;
+    right: 0;
     background-color: #fff; /* White background */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     border-radius: 8px; /* Rounded corners */
     z-index: 1000; /* Ensures it is on top of other elements */
-    min-width: 150px; /* Minimum width */
+    min-width: 200px; /* Minimum width */
     overflow: hidden; /* Ensures no content spills out */
 }
 

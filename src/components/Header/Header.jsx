@@ -134,6 +134,12 @@ const Header = () => {
                             <button onClick={() => navigate("/profile")} className="dropdown-item">
                                 Твоят профил
                             </button>
+                            <button onClick={() => navigate("")} className="dropdown-item">
+                                Твоите обучения
+                            </button>
+                            <button onClick={() => navigate("/faq")} className="dropdown-item">
+                                Често задавани въпроси
+                            </button>
                             <button onClick={handleLogout} className="dropdown-item">
                                 Изход
                             </button>

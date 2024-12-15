@@ -34,8 +34,8 @@ const LoginAndRegistration = () => {
         localStorage.setItem("isLoggedIn", "true");
   
         window.dispatchEvent(new Event("storage"));
-
         navigate("/");
+        window.location.reload();
       })
       .catch((err) => {
         console.error("Error:", err);
