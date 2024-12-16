@@ -20,26 +20,26 @@ const Contacts = () => {
         {/* Contact Details */}
         <div className={styles.contactDetails}>
           <h3>Контакти:</h3>
-          <p>+359 899 55 55 92</p>
-          <p>university@softuni.bg</p>
+          <p>+359 888 123 456</p>
+          <p>info@mathelite.bg</p>
         </div>
 
         {/* Address */}
         <div className={styles.contactDetails}>
           <h3>Адрес:</h3>
           <p>София, ж.к. Младост 4,<br />бул. Александър Малинов №78<br />П.К.: 1799</p>
-          <button className={styles.mapButton}>Намерете ни на картата</button>
+          {/* <button className={styles.mapButton}>Намерете ни на картата</button> */}
         </div>
       </div>
 
-      {/* Map Section */}
+{/* 
       <div className={styles.mapSection}>
         <iframe
           title="Google Maps"
           src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=SoftUni"
           allowFullScreen
         ></iframe>
-      </div>
+      </div> */}
 
       {/* Contact Form Section */}
       <div className={styles.contactFormSection}>
