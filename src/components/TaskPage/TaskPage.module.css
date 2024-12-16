@@ -1,65 +1,144 @@
 .taskPage {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f4f4f9;
-  }
-  
-  .title {
-    text-align: center;
-    color: #004080;
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .gradeSelection {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .gradeButton {
-    padding: 10px 15px;
-    background-color: #004080;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .gradeButton.active,
-  .gradeButton:hover {
-    background-color: #ff9800;
-  }
-  
-  .taskList {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .taskItem {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    margin: 10px;
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-  }
-  
-  .taskItem h3 {
-    color: #004080;
-    margin-bottom: 10px;
-  }
-  
-  .taskItem p {
-    color: #333;
-    font-size: 1rem;
-  }
-  
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f9;
+}
+
+.pageTitle {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+/* Topic Dropdown Styling */
+.topicDropdown {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.topicDropdown:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.topicHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #004080;
+  cursor: pointer;
+}
+
+.toggleIcon {
+  font-size: 1.5rem;
+  color: #ff9800;
+}
+
+.taskList {
+  padding: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.taskItem {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.taskItem:last-child {
+  border-bottom: none;
+}
+
+.taskTitle {
+  font-weight: bold;
+  color: #004080;
+}
+
+.taskItem p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.answerInput {
+  width: 80%;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.correctAnswer {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.incorrectAnswer {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.taskExpression {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.answerInput {
+  width: 100px;
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.taskExpression {
+  margin-right: 10px; /* Add spacing between expression and input */
+  font-size: 1.2rem; /* Ensure readability */
+  color: #004080; /* Dark blue for clear visibility */
+}
+
+.answerInput {
+  width: 50px; /* Adjust width for input */
+  height: 30px;
+  padding: 5px;
+  font-size: 1rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none; /* Remove focus outline */
+}
+
+.answerInput:focus {
+  border-color: #0078ff; /* Highlight focus */
+  box-shadow: 0 0 3px rgba(0, 120, 255, 0.5);
+}
+
+.feedbackIcon {
+  margin-left: 10px; /* Space between input and ✔/✖ icon */
+  font-size: 1.2rem;
+  color: green; /* Green for correct */
+}
+
+.feedbackIcon.incorrect {
+  color: red; /* Red for incorrect */
+}
