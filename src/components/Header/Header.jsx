@@ -29,6 +29,16 @@ const Header = () => {
         navigate("/");
     };
     
+    const handleGradeClick = (grade) => {
+        if (isLoggedIn) {
+          // Navigate to tasks if logged in
+          navigate(`/tasks?grade=${grade}`);
+        } else {
+          // Redirect to login page if not logged in
+          navigate("/loginOrRegistration");
+        }
+    };
+
       const toggleDropdown = () => {
         setShowDropdown(!showDropdown);
       };
@@ -75,22 +85,27 @@ const Header = () => {
                             За ученици
                         </span>
                         {isStudentsOpen && (
-                            <div className="dropdown-menu">
-                                <div className="dropdown-section">
+                                <div className="dropdown-menu">
+                                    <div className="dropdown-section">
                                     <h4>Начален етап</h4>
                                     <ul>
-                                        <li><a href="#class1">1 клас</a></li>
-                                        <li><a href="#class2">2 клас</a></li>
-                                        <li><a href="#class3">3 клас</a></li>
-                                        <li><a href="#class4">4 клас</a></li>
+                                        {[1, 2, 3, 4].map((grade) => (
+                                        <li key={grade}
+                                            onClick={() => handleGradeClick(grade)}>
+                                            {grade} клас
+                                        </li>
+                                        ))}
                                     </ul>
-                                </div>
-                                <div className="dropdown-section">
+                                    </div>
+                                    <div className="dropdown-section">
                                     <h4>Прогимназиален етап</h4>
                                     <ul>
-                                        <li><a href="#class5">5 клас</a></li>
-                                        <li><a href="#class6">6 клас</a></li>
-                                        <li><a href="#class7">7 клас</a></li>
+                                        {[5, 6, 7].map((grade) => (
+                                        <li key={grade}
+                                            onClick={() => handleGradeClick(grade)}>
+                                            {grade} клас
+                                        </li>
+                                        ))}
                                     </ul>
                                 </div>
                                 <div className="dropdown-footer">

@@ -1,58 +1,102 @@
+/* General container */
 .profileContainer {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-    text-align: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  .profileContainer h2 {
-    font-size: 1.8rem;
-    color: #004080;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
-  
-  .profilePic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ffcc00;
-    margin-bottom: 20px;
-  }
-  
-  .profileContainer p {
-    font-size: 1.1rem;
-    color: #333333;
-    margin: 10px 0;
-    line-height: 1.5;
-  }
-  
-  .profileContainer p strong {
-    color: #004080;
-  }
-  
-  .profileButton {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #004080;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .profileButton:hover {
-    background-color: #003366;
-  }
-  
+  display: flex;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar Styling */
+.profileSidebar {
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #ffa500;
+}
+
+.profileSidebar h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.profileSidebar p {
+  margin: 5px 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.profileSidebar nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.profileSidebar nav ul li {
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.profileSidebar nav ul li:hover {
+  background-color: #ffa500;
+}
+
+.logout {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ff4444;
+}
+
+/* Main Content */
+.profileContent {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.profileHeader h2 {
+  color: #003366;
+}
+
+.profileDetails {
+  margin-top: 20px;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.detailRow p {
+  margin: 0;
+  font-size: 16px;
+}
+
+strong {
+  color: #003366;
+}

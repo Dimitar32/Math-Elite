@@ -1,0 +1,65 @@
+.taskPage {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f9;
+  }
+  
+  .title {
+    text-align: center;
+    color: #004080;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .gradeSelection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .gradeButton {
+    padding: 10px 15px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .gradeButton.active,
+  .gradeButton:hover {
+    background-color: #ff9800;
+  }
+  
+  .taskList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .taskItem {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .taskItem h3 {
+    color: #004080;
+    margin-bottom: 10px;
+  }
+  
+  .taskItem p {
+    color: #333;
+    font-size: 1rem;
+  }
+  

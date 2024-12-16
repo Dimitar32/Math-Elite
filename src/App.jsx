@@ -12,6 +12,7 @@ import LoginReg from "./Authorization/LoginAndRegistration/LoginAndRegistration.
 import UserProfile from "./components/UserProfile/UserProfile.jsx";
 import FAQ from "./components/FAQ/FAQ.jsx";
 import Contacts from "./components/Contacts/Contacts.jsx";
+import TaskPage from "./components/TaskPage/TaskPage.jsx";
 
 
 const CLIENT_ID = "1057640799920-ao2d1u399ms60vt30mjido36p8tjt7gh.apps.googleusercontent.com";
@@ -32,6 +33,7 @@ const App = () => {
                         <Route path="/profile" element={<UserProfile />} />
                         <Route path="/faq" element={<FAQ />} />
                         <Route path="/contacts" element={<Contacts />} />
+                        <Route path="/tasks" element={<TaskPage />} />
                     </Routes>
                     <Footer />
                 </div>
