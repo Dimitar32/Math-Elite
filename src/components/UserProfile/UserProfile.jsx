@@ -51,10 +51,10 @@ const UserProfile = () => {
         <div className={styles.profileDetails}>
           {/* <div className={styles.detailRow}> */}
             <p><strong>Име:</strong> {user.fullName}</p>
-            <p><strong>Дата на раждане:</strong> {user.birthDate || "N/A"}</p>
+            <p><strong>Дата на раждане:</strong> {new Date(user.birthDate).toISOString().split('T')[0] || "N/A"}</p>
           {/* </div> */}
           {/* <div className={styles.detailRow}> */}
-            <p><strong>Град:</strong> {user.city || "N/A"}</p>
+            {/* <p><strong>Град:</strong> {user.city || "N/A"}</p> */}
             <p><strong>Страна:</strong> {user.country || "N/A"}</p>
           {/* </div>
           <div className={styles.detailRow}> */}

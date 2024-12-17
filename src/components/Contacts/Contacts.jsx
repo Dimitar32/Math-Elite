@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Contacts.module.css";
 
 const Contacts = () => {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+
+  const validateEmail = (value) => {
+    // Simple regex for email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!value) {
+      setError('Имейл адресът е задължителен');
+    } else if (!emailRegex.test(value)) {
+      setError('Моля, въведете валиден имейл адрес');
+    } else {
+      setError('');
+    }
+  };
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setEmail(value);
+    validateEmail(value);
+  };
+
   return (
     <div className={styles.contactsContainer}>
       {/* Info Section */}
@@ -52,9 +73,22 @@ const Contacts = () => {
           </div>
 
           {/* Email */}
-          <div className={styles.inputGroup}>
+          {/* <div className={styles.inputGroup}>
             <label htmlFor="email">Имейл адрес</label>
             <input type="email" id="email" placeholder="Вашият имейл" />
+          </div> */}
+
+          <div className={styles.inputGroup}>
+            <label htmlFor="email">Имейл адрес</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Вашият имейл"
+              value={email}
+              onChange={handleChange}
+              onBlur={() => validateEmail(email)} // Optional: Validate on blur
+            />
+            {error && <p className={styles.errorMessage}>{error}</p>}
           </div>
 
           {/* Message */}

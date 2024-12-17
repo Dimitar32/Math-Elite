@@ -115,6 +115,7 @@ const Header = () => {
                         )}
                     </li>
                     <li><a href="#individual">Индивидуални уроци</a></li>
+                    <li><a href="#individual">Състезания</a></li>
                     <li><Link to="/mission">Нашата мисия</Link></li>
                     <li><Link to="/about">Кои сме ние</Link></li>
                     <li><Link to="/contacts">Контакти</Link></li>
