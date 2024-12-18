@@ -100,6 +100,7 @@
 strong {
   color: #003366;
 }
+
 /* Edit Button */
 .editButton {
   background-color: #ffa500;
@@ -119,12 +120,13 @@ strong {
 .editForm {
   display: flex;
   flex-direction: column;
+  max-width: 300px;
   gap: 10px;
 }
 
 .editForm label {
   font-weight: bold;
-  color: #333;
+  color: #003366;
 }
 
 .editForm input,
@@ -133,6 +135,8 @@ strong {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
+  background-color: white;
+  color: #343434;
 }
 
 .saveButton {
@@ -147,4 +151,17 @@ strong {
 
 .saveButton:hover {
   background-color: #002b54;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0) brightness(0); /* Makes the icon black */
+  cursor: pointer; /* Ensures the pointer changes to indicate interactivity */
+}
+
+input[type="date"]::-moz-calendar-picker-indicator {
+  filter: invert(0) brightness(0);
+}
+
+input[type="date"] {
+  color: black; /* Text color inside the date picker */
 }

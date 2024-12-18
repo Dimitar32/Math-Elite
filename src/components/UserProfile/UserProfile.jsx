@@ -45,7 +45,7 @@ const UserProfile = () => {
       if (!response.ok) throw new Error("Failed to update user details");
 
       const result = await response.json();
-      alert(result.message);
+      // alert(result.message);
 
       // Update local storage and state
       setUser({ ...user, ...formData });
