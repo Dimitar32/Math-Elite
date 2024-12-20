@@ -31,7 +31,7 @@ const Footer = () => {
                     <h4>Полезни линкове</h4>
                     <ul>
                         <li><Link to="/faq">Често задавани въпроси</Link></li>
-                        <li><a href="#guide">Наръчник</a></li>
+                        <li><Link to="/guidePage">Наръчник</Link></li>
                         <li><a href="#terms">Общи условия</a></li>
                         <li><a href="#privacy">Лични данни</a></li>
                     </ul>

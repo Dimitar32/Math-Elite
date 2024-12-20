@@ -157,6 +157,9 @@ const Header = () => {
                             <button onClick={() => navigate("/faq")} className="dropdown-item">
                                 Често задавани въпроси
                             </button>
+                            <button onClick={() => navigate("/guidePage")} className="dropdown-item">
+                                Наръчник
+                            </button>
                             <button onClick={handleLogout} className="dropdown-item">
                                 Изход
                             </button>

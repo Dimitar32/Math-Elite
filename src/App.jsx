@@ -16,6 +16,7 @@ import TaskPage from "./components/TaskPage/TaskPage.jsx";
 import GeneralInfo from "./components/UserPageComponents/GeneralInfo/Generalinfo.jsx";
 import UserCertificates from "./components/UserPageComponents/UserCertificates/UserCertificates.jsx";
 import UserPayments from "./components/UserPageComponents/UserPayments/UserPayments.jsx";
+import GuidePage from "./components/GuidePage/GuidePage.jsx";
 
 
 
@@ -39,6 +40,7 @@ const App = () => {
                         <Route path="/faq" element={<FAQ />} />
                         <Route path="/contacts" element={<Contacts />} />
                         <Route path="/tasks" element={<TaskPage />} />
+                        <Route path="/guidePage" element={<GuidePage />} />
                         <Route path="/profile" element={<UserProfile />}>
                             <Route index element={<GeneralInfo />} />
                             <Route path="faq" element={<FAQ />} />
