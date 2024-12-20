@@ -14,6 +14,10 @@ import FAQ from "./components/FAQ/FAQ.jsx";
 import Contacts from "./components/Contacts/Contacts.jsx";
 import TaskPage from "./components/TaskPage/TaskPage.jsx";
 import GeneralInfo from "./components/UserPageComponents/GeneralInfo/Generalinfo.jsx";
+import UserCertificates from "./components/UserPageComponents/UserCertificates/UserCertificates.jsx";
+import UserPayments from "./components/UserPageComponents/UserPayments/UserPayments.jsx";
+
+
 
 
 const CLIENT_ID = "1057640799920-ao2d1u399ms60vt30mjido36p8tjt7gh.apps.googleusercontent.com";
@@ -38,6 +42,9 @@ const App = () => {
                         <Route path="/profile" element={<UserProfile />}>
                             <Route index element={<GeneralInfo />} />
                             <Route path="faq" element={<FAQ />} />
+                            <Route path="userCertificates" element={<UserCertificates />} />
+                            <Route path="userPayments" element={<UserPayments />} />
+                            
                         </Route>
                     </Routes>
                     <Footer />

@@ -1,0 +1,55 @@
+.container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .tableHeader {
+    background-color: #34495e;
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .tableRow:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .tableCell {
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: #2c3e50;
+  }
+  
+  .tableCell.paid {
+    color: #27ae60;
+    font-weight: bold;
+  }
+  
+  .tableCell.pending {
+    color: #e67e22;
+    font-weight: bold;
+  }
+  
+  .tableRow:hover {
+    background-color: #ecf0f1;
+  }
+  

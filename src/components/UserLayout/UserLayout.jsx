@@ -34,8 +34,22 @@ const UserLayout = ({ children }) => {
             </li>
             <li>Моето табло</li>
             <li>Обучения</li>
-            <li>Плащания</li>
-            <li>Сертификати</li>
+            <li>
+              <NavLink
+                to="/profile/userPayments"
+                className={({ isActive }) => (isActive ? styles.active : "")}
+              >
+                Плащания
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/profile/userCertificates"
+                className={({ isActive }) => (isActive ? styles.active : "")}
+              >
+                Сертификати
+              </NavLink>
+            </li>
             <li>
               <NavLink
                 to="/profile/faq"
