@@ -56,11 +56,16 @@
   }
   
   .logout {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     font-weight: bold;
     color: #ff4444;
   }
   
+    .profileSidebar .logout:hover {
+      background-color: #ff4444;
+      color: white;
+    }
+
   /* Main Content */
   .profileContent {
     flex: 1;
