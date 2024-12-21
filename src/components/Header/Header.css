@@ -233,6 +233,17 @@ justify-content: center; */
     /* box-sizing: border-box;  */
 }
 
+.mathelite-heading {
+    font-family: 'Arial', sans-serif; /* Choose a clean and modern font */
+    font-size: 3rem; /* Adjust size as needed */
+    color: white; /* A deep blue color */
+    font-weight: bold; /* Emphasize the text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    text-align: center; /* Center align */
+    margin: 10px 0; 
+    font-size: 28px;
+}
+
 @media (max-width: 1550px) {
 
     .header-left {

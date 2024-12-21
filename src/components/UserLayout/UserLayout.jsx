@@ -1,10 +1,20 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import styles from "../UserLayout/UserLayout.module.css";
 
 const UserLayout = ({ children }) => {
+  const navigate = useNavigate();
   const storedUser = JSON.parse(localStorage.getItem("user"));
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("isLoggedIn");
+    setIsLoggedIn(false);
+    setUser(null);
+    navigate("/");
+};
 
   if (!storedUser) {
     return <p>Loading...</p>;
@@ -67,7 +77,11 @@ const UserLayout = ({ children }) => {
               </NavLink>
             </li>
             <li>Настройки</li>
-            <li className={styles.logout}>Изход</li>
+            <li className={styles.logout}>
+                {/*<button onClick={handleLogout} >*/}
+                Изход
+                {/* </button> */}
+            </li>
           </ul>
         </nav>
       </div>

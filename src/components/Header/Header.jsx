@@ -70,8 +70,10 @@ const Header = () => {
         <header className="header">
             <div className="header-left">
                 <div className="logo">
-                    <img src={MathEliteLogo} alt="MathElite Logo" />
-                    <span>MathElite</span>
+                    {/* <img src={MathEliteLogo} alt="MathElite Logo" /> */}
+                    {/* <span>MathElite</span> */}
+                    <h1 className="mathelite-heading">MathElite</h1>
+
                 </div>
             </div>
             <nav className="nav">

@@ -5,6 +5,7 @@ import styles from "./Home.module.css";
 
 const Home = () => {
     const navigate = useNavigate();
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true"; // Example: Replace with actual auth state
 
     return (
         <div className={styles["home-page"]}>
@@ -62,11 +63,19 @@ const Home = () => {
                     Присъединете се към MathElite и започнете вашето пътешествие към успеха
                     в математиката!
                 </p>
-                <button
+                {/* <button
                     className={styles["cta-button"]}
                     onClick={() => navigate("/loginOrRegistration")}
                 >
                     Регистрирайте се сега
+                </button> */}
+                <button
+                    className={styles["cta-button"]}
+                    onClick={() =>
+                        isLoggedIn ? navigate("/profile") : navigate("/loginOrRegistration")
+                    }
+                >
+                    {isLoggedIn ? "Твоят профил" : "Регистрирайте се сега"}
                 </button>
             </div>
         </div>
