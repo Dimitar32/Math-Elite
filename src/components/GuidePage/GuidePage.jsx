@@ -11,6 +11,11 @@ const guides = [
   { grade: 5, link: '/guides/grade-5.pdf' },
   { grade: 6, link: '/guides/grade-6.pdf' },
   { grade: 7, link: '/guides/grade-7.pdf' },
+  { grade: 8, link: '/guides/grade-8.pdf' },
+  { grade: 9, link: '/guides/grade-9.pdf' },
+  { grade: 10, link: '/guides/grade-10.pdf' },
+  { grade: 11, link: '/guides/grade-11.pdf' },
+  { grade: 12, link: '/guides/grade-12.pdf' }
 ];
 
 const GuidePage = () => {
@@ -35,10 +40,10 @@ const GuidePage = () => {
             <div key={guide.grade} className={styles['feature']}>
               <FaBook className={styles['feature-icon']} />
               <h3>Клас {guide.grade}</h3>
-              <p>
+              {/* <p>
                 Изтеглете наръчник за {guide.grade} клас, който съдържа
                 полезни ресурси и задачи.
-              </p>
+              </p> */}
               <a
                 href={guide.link}
                 target="_blank"
@@ -53,7 +58,7 @@ const GuidePage = () => {
       </div>
 
       {/* Call-to-Action Section */}
-      <div className={styles['cta-section']}>
+      {/* <div className={styles['cta-section']}>
         <h2>Готови ли сте да учите?</h2>
         <p>
           Възползвайте се от нашите безплатни ресурси и постигнете успех в
@@ -65,7 +70,7 @@ const GuidePage = () => {
         >
           Регистрирайте се сега
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

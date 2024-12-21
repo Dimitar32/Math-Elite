@@ -58,6 +58,14 @@ const UserLayout = ({ children }) => {
                 Често задавани въпроси
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/profile/guide"
+                className={({ isActive }) => (isActive ? styles.active : "")}
+              >
+                Наръчник
+              </NavLink>
+            </li>
             <li>Настройки</li>
             <li className={styles.logout}>Изход</li>
           </ul>
