@@ -233,6 +233,16 @@ justify-content: center; */
     /* box-sizing: border-box;  */
 }
 
+@media (max-width: 1550px) {
+
+    .header-left {
+        padding-left: 50px;
+    }
+
+    .header-right {
+        padding-right: 50px;
+    }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {

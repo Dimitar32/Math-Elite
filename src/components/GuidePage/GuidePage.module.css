@@ -1,38 +1,111 @@
-.container {
-    padding: 20px;
-    background-color: #f9f9f9;
-    max-width: 800px;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .heading {
-    font-size: 28px;
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .listItem {
-    margin-bottom: 15px;
-  }
-  
-  .link {
-    display: inline-block;
-    font-size: 18px;
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .link:hover {
-    color: #2c3e50;
-  }
-  
+/* General Styling */
+.guide-page {
+  font-family: Arial, sans-serif;
+  color: #004080;
+  background-color: #f4f4f9;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #336699;
+  color: white;
+}
+
+.hero-section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #f4f4f9;
+}
+
+.hero-section p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
+
+.cta-button {
+  background-color: #ffd700;
+  color: #004080;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 41px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ffc107;
+}
+
+/* Features Section */
+.features-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.features-section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #004080;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+  flex: 1;
+  margin: 10px;
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #336699;
+  color: white;
+}
+
+.cta-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #f4f4f9;
+}
+
+.cta-section p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
