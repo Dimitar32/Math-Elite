@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import styles from "../UserPayments/UserPayments.module.css";
 import { FaMoneyCheckAlt } from "react-icons/fa";
 
@@ -68,6 +69,12 @@ const UserPayments = () => {
         <h2>Имате въпроси?</h2>
         <p>Свържете се с нас за съдействие относно плащанията си.</p>
         <button className={styles["cta-button"]} onClick={() => navigate("/contacts")}>Свържете се с Поддръжка</button>
+        
+        <button className={styles["cta-button"]}>
+          <NavLink to="/profile/contacts">
+                  Свържете се с Поддръжка
+          </NavLink>
+        </button>
       </div>
     </div>
   );

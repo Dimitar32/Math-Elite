@@ -47,6 +47,7 @@ const App = () => {
                             <Route path="userCertificates" element={<UserCertificates />} />
                             <Route path="userPayments" element={<UserPayments />} />
                             <Route path="guide" element={<GuidePage />} />
+                            <Route path="contacts" element={<Contacts />} />
                         </Route>
                     </Routes>
                     <Footer />
