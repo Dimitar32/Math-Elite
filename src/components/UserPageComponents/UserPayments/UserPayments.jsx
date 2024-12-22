@@ -67,7 +67,7 @@ const UserPayments = () => {
       <div className={styles["cta-section"]}>
         <h2>Имате въпроси?</h2>
         <p>Свържете се с нас за съдействие относно плащанията си.</p>
-        <button className={styles["cta-button"]}>Свържете се с Поддръжка</button>
+        <button className={styles["cta-button"]} onClick={() => navigate("/contacts")}>Свържете се с Поддръжка</button>
       </div>
     </div>
   );
