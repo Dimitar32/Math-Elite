@@ -24,13 +24,13 @@ const TaskPage = () => {
     const grouped = {};
     tasks.forEach((task) => {
       if (!grouped[task.topic.title]) {
-        grouped[task.topic.title] = [];
+        grouped[task.topic.title] = { description: task.topic.description, tasks: [] };
       }
-      grouped[task.topic.title].push(task);
+      grouped[task.topic.title].tasks.push(task);
     });
-    return Object.entries(grouped).map(([title, tasks]) => ({
+    return Object.entries(grouped).map(([title, content]) => ({
       title,
-      tasks,
+      ...content,
     }));
   };
 
@@ -51,7 +51,7 @@ const TaskPage = () => {
 
   return (
     <div className={styles.taskPage}>
-      <h2 className={styles.pageTitle}>Задачи за {grade} клас</h2>
+      <h2 className={styles.pageTitle}>Теми</h2>
       {topics.length === 0 ? (
         <p>Няма налични задачи за този клас.</p>
       ) : (
@@ -59,7 +59,9 @@ const TaskPage = () => {
           <div key={index} className={styles.topicDropdown}>
             {/* Topic Title */}
             <div
-              className={styles.topicHeader}
+              className={`${styles.topicHeader} ${
+                openTopic === index ? styles.active : ""
+              }`}
               onClick={() => toggleTopic(index)}
             >
               <h3>{topic.title}</h3>
@@ -68,37 +70,56 @@ const TaskPage = () => {
               </span>
             </div>
 
-            {/* Tasks */}
+            {/* Topic Content */}
             {openTopic === index && (
-              <div className={styles.taskList}>
-                {topic.tasks.map((task) => (
-                  <div key={task.id} className={styles.taskItem}>
-                  {/* Task Expression */}
-                  <span className={styles.taskExpression}>{task.expression} =</span>
-
-                  {/* Input for Answer */}
-                  <input
-                    type="text"
-                    placeholder="?"
-                    value={userAnswers[task.id] || ""}
-                    onChange={(e) => handleInputChange(task.id, e.target.value)}
-                    className={styles.answerInput}
-                  />
-
-                  {/* Feedback Icon */}
-                  {userAnswers[task.id] && (
-                    <span
-                      className={`${styles.feedbackIcon} ${
-                        checkAnswer(task) ? "" : styles.incorrect
-                      }`}
-                    >
-                      {checkAnswer(task) ? "✔" : "✖"}
-                    </span>
-                  )}
+              <div className={styles.topicContent}>
+                {/* YouTube Video */}
+                <div className={styles.videoWrapper}>
+                  <iframe
+                    width="100%"
+                    height="315"
+                    src="https://www.youtube.com/embed/Ef75kGRNP18"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
+                {/* when api have it 
+                src={topic.videoLink} // Replace hardcoded video link
+                <p className={styles.description}>{topic.description}</p> // Dynamic description */}
 
-                
-                ))}
+                {/* Description */}
+                <p className={styles.description}>{topic.description}</p>
+
+                {/* Tasks */}
+                <div className={styles.taskList}>
+                  {topic.tasks.map((task) => (
+                    <div key={task.id} className={styles.taskItem}>
+                      <span className={styles.taskExpression}>
+                        {task.expression} =
+                      </span>
+                      <input
+                        type="text"
+                        placeholder="?"
+                        value={userAnswers[task.id] || ""}
+                        onChange={(e) =>
+                          handleInputChange(task.id, e.target.value)
+                        }
+                        className={styles.answerInput}
+                      />
+                      {userAnswers[task.id] && (
+                        <span
+                          className={`${styles.feedbackIcon} ${
+                            checkAnswer(task) ? styles.correct : styles.incorrect
+                          }`}
+                        >
+                          {checkAnswer(task) ? "✔" : "✖"}
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
