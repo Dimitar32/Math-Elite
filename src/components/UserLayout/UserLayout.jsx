@@ -76,6 +76,14 @@ const UserLayout = ({ children }) => {
                 Наръчник
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/profile/contacts"
+                className={({ isActive }) => (isActive ? styles.active : "")}
+              >
+                Контакти
+              </NavLink>
+            </li>
             <li>Настройки</li>
             <li className={styles.logout}>
                 {/*<button onClick={handleLogout} >*/}
