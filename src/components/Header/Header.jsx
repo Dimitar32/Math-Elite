@@ -6,6 +6,7 @@ import "./Header.css";
 const Header = () => {
     const navigate = useNavigate();
     const [isStudentsOpen, setIsStudentsOpen] = useState(false);
+    const [isCompetitionOpen, setIsCompetitionOpen] = useState(false);
     const dropdownRef = useRef(null);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [user, setUser] = useState(null);
@@ -51,12 +52,14 @@ const Header = () => {
 
     // Toggle dropdown for "За ученици"
     const toggleStudentsDropdown = () => setIsStudentsOpen(!isStudentsOpen);
+    const toggleCompetitionDropdown = () => setIsCompetitionOpen(!isCompetitionOpen);
+
 
     // Close dropdown when clicking outside
     useEffect(() => {
         const handleOutsideClick = (event) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-                setIsStudentsOpen(false);
+                // setIsStudentsOpen(false);
             }
         };
 
@@ -117,7 +120,37 @@ const Header = () => {
                         )}
                     </li>
                     <li><a href="#individual">Индивидуални уроци</a></li>
-                    <li><a href="#individual">Състезания</a></li>
+                    <li ref={dropdownRef}>
+                        <span
+                            className="dropdown-toggle"
+                            onClick={toggleCompetitionDropdown}
+                        >
+                            Състезания
+                        </span>
+                        {isCompetitionOpen && (
+                            <div className="dropdown-menu">
+                                <div className="dropdown-section">
+                                    <h4>Задачи от състезания за: </h4>
+                                    <ul>
+                                        {[1, 2, 3, 4].map((grade) => (
+                                        <li key={grade}>
+                                            {grade} клас
+                                        </li>
+                                        ))}
+                                    </ul>
+                                    </div>
+                                    <div className="dropdown-section">
+                                    <ul>
+                                        {[5, 6, 7].map((grade) => (
+                                        <li key={grade}>
+                                            {grade} клас
+                                        </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        )}
+                    </li>
                     <li><Link to="/mission">Нашата мисия</Link></li>
                     <li><Link to="/about">Кои сме ние</Link></li>
                     <li><Link to="/contacts">Контакти</Link></li>

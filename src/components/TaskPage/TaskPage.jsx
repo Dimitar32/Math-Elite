@@ -70,14 +70,12 @@ const TaskPage = () => {
               </span>
             </div>
 
-            {/* Topic Content */}
             {openTopic === index && (
               <div className={styles.topicContent}>
-                {/* YouTube Video */}
                 <div className={styles.videoWrapper}>
                   <iframe
-                    width="100%"
-                    height="315"
+                    // width="100%"
+                    // height="315"
                     src="https://www.youtube.com/embed/Ef75kGRNP18"
                     title="YouTube video player"
                     frameBorder="0"

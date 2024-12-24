@@ -7,7 +7,7 @@
 .pageTitle {
   text-align: left;
   font-size: 1.8rem;
-  color: #333;
+  color: #004080;
   margin-bottom: 20px;
 }
 
@@ -17,6 +17,7 @@
   border-radius: 8px;
   margin-bottom: 10px;
   background-color: #fff;
+  width: 71%;
 }
 
 .topicHeader {
@@ -28,6 +29,7 @@
   font-weight: bold;
   cursor: pointer;
   color: #333;
+  color: #004080;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ddd;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -55,7 +57,6 @@
   line-height: 1.5;
 }
 
-
 .videoWrapper {
   margin-top: 20px;
   position: relative;
@@ -68,8 +69,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 62%;
-  height: 62%;
+  width: 100%;
+  height: 100%;
   border: none;
 }
 
@@ -103,6 +104,8 @@
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: white;
+  color: black;
 }
 
 .feedbackIcon.correct {
