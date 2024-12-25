@@ -28,7 +28,7 @@
 .footer-section h4 {
     margin-bottom: 15px;
     font-size: 18px;
-    color: #FFD700; /* Gold for section titles */
+    color: #ffa500; /* Gold for section titles */
 }
 
 .footer-section ul {
@@ -48,7 +48,7 @@
 
 .footer-section ul li a:hover,
 .footer-section .social-icons a:hover {
-    color: #FFD700; /* Gold hover effect */
+    color: #ffa500; /* Gold hover effect */
 }
 
 /* Social Icons */
@@ -92,7 +92,7 @@
 }
 
 .social-icons a:hover {
-    color: #FFD700; /* Gold hover effect */
+    color: #ffa500; /* Gold hover effect */
 }
 
 .social-icon {
