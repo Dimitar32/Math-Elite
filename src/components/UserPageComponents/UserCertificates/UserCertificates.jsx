@@ -32,108 +32,37 @@ const UserCertificates = () => {
     }
   };
 
-  const handleEdit = (certificate) => {
-    setEditMode(true);
-    setFormData(certificate); // Set current certificate data for editing
-  };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSave = async () => {
-    try {
-      const response = await fetch(
-        `https://localhost:7140/api/Certificate/update/${formData.id}`, // Update certificate by ID
-        {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
-
-      if (!response.ok) throw new Error("Failed to update certificate");
-
-      // Refresh the certificates list after updating
-      fetchCertificates(user.id);
-      setEditMode(false);
-    } catch (error) {
-      console.error("Error updating certificate:", error.message);
-    }
-  };
-
-  if (!user) {
-    return <p>Loading user information...</p>;
-  }
-
   return (
-    <div>
-      <div className={styles.header}>
-        <h2>Сертификати</h2>
+    <div className={styles["certificate-page"]}>
+      {/* Hero Section */}
+      <div className={styles["hero-section"]}>
+        <h2>Моите Сертификати</h2>
+        <p>Вижте вашите сертификати, придобити по време на обучението ви в MathElite.</p>
       </div>
 
-      {/* Certificate List */}
-      {!editMode ? (
-        <div className={styles.certificateList}>
-          {certificates.length === 0 ? (
-            <p>Нямате сертификати.</p>
-          ) : (
-            certificates.map((certificate) => (
-              <div className={styles.certificate} key={certificate.id}>
-                <h3>{certificate.title}</h3>
-                <p><strong>Дата:</strong> {certificate.date}</p>
-                <p><strong>Описание:</strong> {certificate.description}</p>
-                <button
-                  className={styles.editButton}
-                  onClick={() => handleEdit(certificate)}
-                >
-                  Редактирай
-                </button>
+      {/* Certificate Cards Section */}
+      <div className={styles["card-section"]}>
+        <h2 className={styles.heading}>Постижения</h2>
+        {certificates.length === 0 ? (
+          <p>Нямате налични сертификати.</p>
+        ) : (
+          <div className={styles.cardContainer}>
+            {certificates.map((certificate, index) => (
+              <div className={styles.card} key={index}>
+                <h3 className={styles.title}>{certificate.title}</h3>
+                <p className={styles.date}>{certificate.date}</p>
+                <p className={styles.description}>{certificate.description}</p>
               </div>
-            ))
-          )}
-        </div>
-      ) : (
-        // Edit Certificate Form
-        <div className={styles.editForm}>
-          <h3>Редактиране на сертификат</h3>
-          <label>Заглавие:</label>
-          <input
-            type="text"
-            name="title"
-            value={formData.title || ""}
-            onChange={handleChange}
-          />
-
-          <label>Дата:</label>
-          <input
-            type="date"
-            name="date"
-            value={formData.date || ""}
-            onChange={handleChange}
-          />
-
-          <label>Описание:</label>
-          <textarea
-            name="description"
-            value={formData.description || ""}
-            onChange={handleChange}
-          ></textarea>
-
-          <button className={styles.saveButton} onClick={handleSave}>
-            Запази
-          </button>
-          <button
-            className={styles.cancelButton}
-            onClick={() => setEditMode(false)}
-          >
-            Откажи
-          </button>
-        </div>
-      )}
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
 
 export default UserCertificates;
+
+
+
 
