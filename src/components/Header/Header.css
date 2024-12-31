@@ -254,24 +254,82 @@ justify-content: center; */
         padding-right: 50px;
     }
 }
-/* Responsive Design */
-@media (max-width: 768px) {
+
+@media (max-width: 1250px) {
     .header {
         flex-wrap: wrap;
+        padding: 10px;
+        justify-content: center; /* Center content for smaller screens */
+    }
+
+    .header-left {
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .header-right {
+        padding-right: 0;
+        justify-content: center;
+        gap: 10px;
     }
 
     .nav ul {
         flex-direction: column;
         gap: 10px;
         width: 100%;
-        align-items: flex-start;
+        align-items: center; /* Center-align navigation items */
+        padding: 0;
     }
 
+    .nav ul li {
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        width: 90%; /* Adjust width for mobile devices */
+        left: 5%; /* Center dropdown */
+    }
+
+    .login-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 5px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-left,
     .header-right {
-        padding-right: 0;
+        padding: 0;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 25px;
+    }
+
+    .profile-img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .login-button {
+        padding: 8px 15px;
+        font-size: 12px;
     }
 
     .dropdown-menu {
         width: 100%;
+        padding: 10px;
     }
 }

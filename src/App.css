@@ -3,7 +3,8 @@ body, html {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden;
+  height: 100%;
+  overflow-x: hidden; 
   font-family: 'Arial', sans-serif; /* Чист и прост шрифт, подходящ за детски сайт */
   /*padding-top: 25px;*/ /* Това число трябва да отговаря на височината на хедъра */
 }

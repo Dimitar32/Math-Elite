@@ -5,6 +5,7 @@
     width: 100%; /* Full width of the viewport */
     box-sizing: border-box; /* Includes padding in width calculation */
     position: relative; /* Ensures it stays positioned correctly */
+    overflow-x: hidden; /* Prevent overflow */
 }
 
 .footer-container {
@@ -98,16 +99,43 @@
     font-size: 20px; /* Adjust icon size */
 }
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 0px 0; /* Space inside the footer */
     }
 
     .footer-section {
         min-width: 100%; /* Expand each section fully on mobile */
+        max-width: 100%; /* Prevent sections from overflowing */
         margin-bottom: 20px;
+    }
+
+    .social-icons {
+        flex-direction: row; /* Stack icons horizontally */
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section h4 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .footer-section ul li {
+        font-size: 12px; /* Reduce text size for smaller devices */
+    }
+
+    .social-icon {
+        font-size: 18px; /* Reduce icon size for smaller screens */
+    }
+
+    .footer-bottom {
+        font-size: 12px; /* Smaller copyright text */
     }
 }
